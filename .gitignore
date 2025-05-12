@@ -1,0 +1,19 @@
+# Entornos
+__pycache__/
+*.py[cod]
+.venv/
+env/
+.ipynb_checkpoints/
+
+# Datos
+data/raw/
+data/processed/
+
+# Archivos de configuración sensibles
+config/*.yaml
+
+# Jupyter
+*.ipynb_checkpoints
+
+# Sistema
+.DS_Store

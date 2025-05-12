@@ -1,0 +1,19 @@
+2025-05-12 15:23:35,678 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-12 15:23:35,678 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-12 15:23:36,771 - ERROR - Error al crear la base de datos: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-12 15:23:36,771 - ERROR - Error en el pipeline: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-12 15:23:36,771 - INFO - Pipeline interrumpido después de 1.09 segundos
+2025-05-12 15:53:18,229 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-12 15:53:18,229 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-12 15:53:18,280 - ERROR - Error al crear la base de datos: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-12 15:53:18,280 - ERROR - Error en el pipeline: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-12 15:53:18,280 - INFO - Pipeline interrumpido después de 0.05 segundos
+2025-05-12 15:53:52,087 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-12 15:53:52,087 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-12 15:53:52,387 - ERROR - Error al crear la base de datos: 
+2025-05-12 15:53:52,387 - ERROR - Error en el pipeline: 
+2025-05-12 15:53:52,387 - INFO - Pipeline interrumpido después de 0.30 segundos
