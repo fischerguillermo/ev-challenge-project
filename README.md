@@ -5,7 +5,7 @@ Este proyecto implementa un pipeline de datos para ingestar, transformar y anali
 ## Estructura del Proyecto
 
 ```
-ev_challenge_project/
+ev-data-pipeline/
 ├── data/
 │   ├── raw/                 # Datos crudos descargados
 │   └── processed/           # Datos procesados y para Power BI
@@ -113,12 +113,8 @@ El pipeline y el dashboard de Power BI están diseñados para responder a las si
 3. ¿Dónde se concentran geográficamente los vehículos elegibles para CAFV?
 4. ¿Cuál es el cambio año tras año en los registros de vehículos eléctricos por condado?
 
-## Solución de Problemas
+Los resultados detallados se pueden ver en el dashboard de Power BI ubicado en la carpeta `dashboard/`.
 
-- **Error de conexión a PostgreSQL**: Verifica las credenciales en `config.py` y asegúrate de que PostgreSQL esté en ejecución.
-- **Error de dependencias**: Asegúrate de haber instalado todas las dependencias con `pip install -r requirements.txt`.
-- **Archivos no encontrados**: Verifica que los directorios existan y tengan permisos de escritura.
+## Documentación
 
-## Autor
-
-Guillermo Fischer
+Para más detalles sobre la arquitectura, decisiones de diseño y transformaciones de datos, consulte la documentación técnica en `doc/technical_documentation.md`.
