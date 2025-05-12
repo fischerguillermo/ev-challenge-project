@@ -30,11 +30,11 @@ DB_CONFIG = {
     'port': '5432',
     'database': 'ev_challenge_db',
     'user': 'postgres',
-    'password': 'fischer10'  # En producción, esto debería manejarse de forma segura
+    'password': ''  # En producción, esto debería manejarse de forma segura
 }
 
 # URL del conjunto de datos de vehículos eléctricos
-EV_DATA_URL = 'https://data.seattle.gov/api/views/f6w7-q2d6/rows.csv?accessType=DOWNLOAD'
+EV_DATA_URL = 'https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD'
 RAW_DATA_FILENAME = 'electric_vehicle_population_data.csv'
 
 # Logger para usar en otros módulos
