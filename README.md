@@ -6,12 +6,15 @@ Este proyecto implementa un pipeline de datos para ingestar, transformar y anali
 
 ```
 ev-data-pipeline/
+├── dashboard                # dashboard de Power BI
 ├── data/
 │   ├── raw/                 # Datos crudos descargados
 │   └── processed/           # Datos procesados y para Power BI
+│       └── power_bi/        # Datos procesador para Power BI
+├── doc/                     # Documentacion tecnica
 ├── logs/                    # Archivos de registro
+├── notebooks/               # Notebook para analisis exploratorio
 ├── src/
-│   ├── __init__.py
 │   ├── config.py            # Configuraciones centralizadas
 │   ├── database.py          # Operaciones de base de datos
 │   ├── extract.py           # Extracción de datos
@@ -19,13 +22,14 @@ ev-data-pipeline/
 │   ├── load.py              # Carga en base de datos
 │   ├── powerbi_prep.py      # Preparación para Power BI
 │   └── main.py              # Script principal
+├── requirements.txt         # Dependencias del entorno virtual
 └── README.md                # Este archivo
 ```
 
 ## Requerimientos
 
 - Python 3.9+
-- Conda o Miniconda
+- Conda
 - PostgreSQL
 - Power BI Desktop (para visualizar el dashboard)
 
@@ -39,8 +43,8 @@ cd ev_challenge_project
 
 2. Crear un entorno virtual (opcional pero recomendado):
 ```bash
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+conda create -n ev_challenge python=3.9
+conda activate ev_challenge
 ```
 
 3. Instalar dependencias:
@@ -104,16 +108,9 @@ python powerbi_prep.py
 
 Para visualizar los datos en Power BI:
 
-1. **Opción 1 - Conexión directa a PostgreSQL**:
-   - Abre Power BI Desktop
-   - Selecciona "Obtener datos" > "PostgreSQL"
-   - Configura la conexión con los parámetros en `config.py`
-   - Importa las tablas necesarias
-
-2. **Opción 2 - Archivos CSV**:
-   - Los archivos CSV generados se encuentran en `data/processed/power_bi/`
-   - En Power BI Desktop, selecciona "Obtener datos" > "Texto/CSV"
-   - Importa los archivos CSV generados
+1. Los archivos CSV generados se encuentran en `data/processed/power_bi/`
+2. En Power BI Desktop, selecciona "Obtener datos" > "Texto/CSV"
+3. Importa los archivos CSV generados
 
 ## Preguntas Respondidas
 
