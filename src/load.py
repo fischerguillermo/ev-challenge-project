@@ -25,7 +25,7 @@ def load_data_to_database(df, table_name='electric_vehicles'):
         connection = get_connection()
         cursor = connection.cursor()
         
-        # Truncar la tabla si existe para evitar duplicados (opcional)
+        # Truncar la tabla si existe para evitar duplicados
         logger.info(f"Eliminando datos existentes de la tabla {table_name}")
         cursor.execute(f"TRUNCATE TABLE {table_name}")
         
@@ -35,10 +35,10 @@ def load_data_to_database(df, table_name='electric_vehicles'):
         # Usar copy_from para carga eficiente
         logger.info(f"Cargando {len(df_copy)} filas en la tabla {table_name}")
         
-        # Convertir DataFrame a CSV en memoria
+        # Convertir DataFrame a CSV en memoria( Hago coincidir mi dataframe con la tabla para no recibir errores en copy_from)
         buffer = StringIO()
         df_copy.to_csv(buffer, index=False, header=False, na_rep='NULL')
-        buffer.seek(0)
+        buffer.seek(0) # Pongo el cursor al inicio del buffer
         
         # Copiar del buffer a la tabla
         cursor.copy_from(buffer, table_name, sep=',', null='NULL', columns=df_copy.columns.tolist())
@@ -88,9 +88,6 @@ def prepare_dataframe_for_db(df, table_name, cursor):
         # Crear una copia del DataFrame para no modificar el original
         df_copy = df.copy()
         
-        # Convertir nombres de columnas a minúsculas para comparación
-        df_copy.columns = df_copy.columns.str.lower()
-        
         # Solo mantener las columnas que existen en la tabla
         common_columns = [col for col in df_copy.columns if col in db_columns]
         df_copy = df_copy[common_columns]
@@ -103,7 +100,7 @@ def prepare_dataframe_for_db(df, table_name, cursor):
             for col in missing_columns:
                 df_copy[col] = None
         
-        # Asegurar el orden correcto de las columnas (excluyendo 'id' si es autoincremental)
+        # Asegurar el orden correcto de las columnas (excluyendo 'id')
         db_columns_without_id = [col for col in db_columns if col != 'id']
         df_copy = df_copy[db_columns_without_id]
         

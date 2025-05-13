@@ -17,3 +17,6 @@ config/*.yaml
 
 # Sistema
 .DS_Store
+
+# Variables de entorno
+.env

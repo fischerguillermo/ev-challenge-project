@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
 import logging
+from dotenv import load_dotenv
+
+
+
 
 # Configuración de rutas del proyecto
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -25,12 +29,15 @@ logging.basicConfig(
 )
 
 # Configuraciones de base de datos
+# Carga las variables del .env
+load_dotenv()
+
 DB_CONFIG = {
-    'host': 'localhost',
-    'port': '5432',
-    'database': 'ev_challenge_db',
-    'user': 'postgres',
-    'password': ''  # En producción, esto debería manejarse de forma segura
+    'host':     os.getenv('DB_HOST'),
+    'port':     os.getenv('DB_PORT'),
+    'database': os.getenv('DB_NAME'),
+    'user':     os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
 }
 
 # URL del conjunto de datos de vehículos eléctricos

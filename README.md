@@ -50,7 +50,18 @@ pip install -r requirements.txt
 
 4. Configurar PostgreSQL:
    - Asegúrate de tener PostgreSQL instalado y en ejecución
-   - Si es necesario, actualiza las credenciales de la base de datos en `src/config.py`
+
+5. Crear el archivo `.env`
+
+En la raíz del proyecto, crea un archivo llamado **`.env`** (asegúrate de que esté en tu `.gitignore`) con el siguiente contenido:
+
+```dotenv
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=ev_challenge_db
+DB_USER=postgres
+DB_PASSWORD=[TuContraseña]
+```
 
 ## Uso
 

@@ -63,41 +63,42 @@ def create_database_if_not_exists():
 
 def create_tables():
     """
-    Crea las tablas necesarias en la base de datos.
+    Crea las tablas necesarias en la base de datos, optimizadas para las consultas analíticas requeridas.
     """
     connection = None
     try:
         connection = get_connection()
         cursor = connection.cursor()
         
-        # Crear tabla para vehículos eléctricos
+        # Crear tabla optimizada con solo las columnas necesarias para el análisis requerido
+        # Eliminamos columnas innecesarias para las preguntas específicas
         create_table_query = """
         CREATE TABLE IF NOT EXISTS electric_vehicles (
             id SERIAL PRIMARY KEY,
-            vin VARCHAR(50),
+            dol_vehicle_id NUMERIC,
             county VARCHAR(100),
             city VARCHAR(100),
-            state VARCHAR(50),
-            postal_code VARCHAR(20),
-            model_year INTEGER,
+            state VARCHAR(100),
+            postal_code VARCHAR(100),
+            model_year DATE,
             make VARCHAR(100),
             model VARCHAR(100),
             electric_vehicle_type VARCHAR(100),
             cafv_eligibility VARCHAR(100),
-            electric_range INTEGER,
-            base_msrp NUMERIC,
-            legislative_district INTEGER,
-            dol_vehicle_id VARCHAR(100),
-            vehicle_location VARCHAR(255),
-            electric_utility VARCHAR(100),
-            registration_date DATE
+            electric_range NUMERIC
         );
+        
+        -- Crear índices para mejorar rendimiento de consultas
+        CREATE INDEX IF NOT EXISTS idx_ev_model_year ON electric_vehicles(model_year);
+        CREATE INDEX IF NOT EXISTS idx_ev_model ON electric_vehicles(model);
+        CREATE INDEX IF NOT EXISTS idx_ev_county ON electric_vehicles(county);
+        CREATE INDEX IF NOT EXISTS idx_ev_cafv ON electric_vehicles(cafv_eligibility);
         """
         cursor.execute(create_table_query)
         
         # Confirmar cambios
         connection.commit()
-        logger.info("Tablas creadas correctamente")
+        logger.info("Tablas e índices creados correctamente")
         
     except psycopg2.Error as e:
         logger.error(f"Error al crear las tablas: {e}")
@@ -115,6 +116,41 @@ def initialize_database():
     create_database_if_not_exists()
     create_tables()
     logger.info("Base de datos inicializada correctamente")
+
+# Función para ejecutar consultas analíticas comunes
+def execute_query(query, params=None):
+    """
+    Ejecuta una consulta SQL y devuelve los resultados.
+    
+    Args:
+        query (str): Consulta SQL a ejecutar
+        params (tuple, optional): Parámetros para la consulta
+        
+    Returns:
+        list: Resultados de la consulta
+    """
+    connection = None
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        
+        if params:
+            cursor.execute(query, params)
+        else:
+            cursor.execute(query)
+            
+        # Obtener resultados
+        results = cursor.fetchall()
+        column_names = [desc[0] for desc in cursor.description]
+        
+        return {'columns': column_names, 'data': results}
+        
+    except psycopg2.Error as e:
+        logger.error(f"Error al ejecutar consulta: {e}")
+        return None
+    finally:
+        if connection:
+            connection.close()
 
 if __name__ == "__main__":
     # Si este script se ejecuta directamente, inicializa la base de datos

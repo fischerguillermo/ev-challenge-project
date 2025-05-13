@@ -45,12 +45,12 @@ def get_vehicles_by_year():
     """
     query = """
     SELECT 
-        EXTRACT(YEAR FROM registration_date) AS registration_year,
+        EXTRACT(YEAR FROM model_year)::INT AS registration_year,
         COUNT(*) AS vehicle_count
     FROM 
         electric_vehicles
     WHERE 
-        registration_date IS NOT NULL
+        model_year IS NOT NULL
     GROUP BY 
         registration_year
     ORDER BY 
@@ -91,6 +91,7 @@ def get_cafv_by_location():
     """
     query = """
     SELECT 
+        'United States'        AS country,
         county, 
         city, 
         cafv_eligibility,
@@ -118,12 +119,12 @@ def get_yoy_change():
     WITH yearly_registrations AS (
         SELECT 
             county,
-            EXTRACT(YEAR FROM registration_date) AS year,
+            EXTRACT(YEAR FROM model_year)::INT AS year,
             COUNT(*) AS registration_count
         FROM 
             electric_vehicles
         WHERE 
-            registration_date IS NOT NULL
+            model_year IS NOT NULL
         GROUP BY 
             county, year
     ),

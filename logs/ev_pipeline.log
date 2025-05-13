@@ -100,3 +100,925 @@ dtype: int64
 CONTEXT:  COPY electric_vehicles, línea 1, columna electric_range: «21.0»
 
 2025-05-12 17:28:09,548 - ERROR - Fallo en la carga de datos. Deteniendo el pipeline.
+2025-05-13 12:26:38,676 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 12:26:38,696 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 12:26:38,696 - INFO - Proceso de extracción completado con éxito
+2025-05-13 12:26:38,696 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 12:26:39,315 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 12:26:39,315 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 12:26:39,327 - INFO - Limpiando nombres de columnas
+2025-05-13 12:26:39,356 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 12:26:39,383 - INFO - Convirtiendo tipos de datos
+2025-05-13 12:26:39,415 - INFO - Columna vin convertida a categórica
+2025-05-13 12:26:39,434 - INFO - Columna county convertida a categórica
+2025-05-13 12:26:39,456 - INFO - Columna city convertida a categórica
+2025-05-13 12:26:39,466 - INFO - Columna state convertida a categórica
+2025-05-13 12:26:39,466 - INFO - Columna postal_code convertida a numérica
+2025-05-13 12:26:39,496 - INFO - Columna model_year convertida a fecha
+2025-05-13 12:26:39,510 - INFO - Columna make convertida a categórica
+2025-05-13 12:26:39,518 - INFO - Columna model convertida a categórica
+2025-05-13 12:26:39,548 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 12:26:39,588 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 12:26:39,590 - INFO - Columna electric_range convertida a numérica
+2025-05-13 12:26:39,590 - INFO - Manejando valores faltantes
+2025-05-13 12:26:39,598 - INFO - Valores nulos por columna antes del tratamiento:
+vin                       0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 12:26:39,602 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 12:26:39,625 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 12:26:39,633 - INFO - Valores nulos por columna después del tratamiento:
+vin                      0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 12:26:39,634 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 12:26:39,642 - INFO - Duplicados eliminados basados en VIN
+2025-05-13 12:26:39,642 - INFO - Filas después de eliminar duplicados: 14122
+2025-05-13 12:26:39,643 - INFO - Se eliminaron 225622 filas duplicadas
+2025-05-13 12:26:39,738 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 12:26:39,738 - INFO - Limpiando nombres de columnas
+2025-05-13 12:26:42,174 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 12:26:42,174 - INFO - Proceso de transformación completado con éxito
+2025-05-13 12:26:42,175 - INFO - Dataset optimizado: 11 columnas, 14122 filas
+2025-05-13 12:26:42,175 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 13:13:41,656 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:13:41,656 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:13:42,047 - ERROR - Error al crear la base de datos: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-13 13:13:42,047 - ERROR - Error en el pipeline: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-13 13:13:42,047 - INFO - Pipeline interrumpido después de 0.39 segundos
+2025-05-13 13:25:31,193 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:25:31,193 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:25:31,251 - ERROR - Error al crear la base de datos: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-13 13:25:31,251 - ERROR - Error en el pipeline: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-13 13:25:31,251 - INFO - Pipeline interrumpido después de 0.06 segundos
+2025-05-13 13:25:51,936 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:25:51,936 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:25:51,989 - ERROR - Error al crear la base de datos: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-13 13:25:51,989 - ERROR - Error en el pipeline: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+2025-05-13 13:25:51,989 - INFO - Pipeline interrumpido después de 0.05 segundos
+2025-05-13 13:27:53,782 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:27:53,782 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:27:55,557 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 13:27:55,595 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:27:55,910 - ERROR - Error al crear las tablas: error de sintaxis en o cerca de «)»
+LINE 15:         );
+                 ^
+
+2025-05-13 13:27:55,910 - ERROR - Error en el pipeline: error de sintaxis en o cerca de «)»
+LINE 15:         );
+                 ^
+
+2025-05-13 13:27:55,910 - INFO - Pipeline interrumpido después de 2.13 segundos
+2025-05-13 13:29:00,437 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:29:00,438 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:29:00,489 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 13:29:00,539 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:29:00,539 - ERROR - Error al crear las tablas: error de sintaxis en o cerca de «;»
+LINE 15:         ;
+                 ^
+
+2025-05-13 13:29:00,539 - ERROR - Error en el pipeline: error de sintaxis en o cerca de «;»
+LINE 15:         ;
+                 ^
+
+2025-05-13 13:29:00,539 - INFO - Pipeline interrumpido después de 0.10 segundos
+2025-05-13 13:30:17,573 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:30:17,573 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:30:17,632 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 13:30:17,686 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:30:18,877 - INFO - Tablas e índices creados correctamente
+2025-05-13 13:30:18,879 - INFO - Base de datos inicializada correctamente
+2025-05-13 13:30:18,879 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 13:30:18,881 - INFO - Descargando datos desde https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD
+2025-05-13 13:30:31,206 - INFO - Datos descargados correctamente en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 13:30:31,206 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 13:30:31,207 - INFO - Proceso de extracción completado con éxito
+2025-05-13 13:30:31,207 - INFO - Paso 3/5: Transformando datos
+2025-05-13 13:30:31,207 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 13:30:31,803 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 13:30:31,803 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 13:30:31,818 - INFO - Limpiando nombres de columnas
+2025-05-13 13:30:31,841 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 13:30:31,862 - INFO - Convirtiendo tipos de datos
+2025-05-13 13:30:31,894 - INFO - Columna vin convertida a categórica
+2025-05-13 13:30:31,911 - INFO - Columna county convertida a categórica
+2025-05-13 13:30:31,931 - INFO - Columna city convertida a categórica
+2025-05-13 13:30:31,940 - INFO - Columna state convertida a categórica
+2025-05-13 13:30:31,940 - INFO - Columna postal_code convertida a numérica
+2025-05-13 13:30:31,965 - INFO - Columna model_year convertida a fecha
+2025-05-13 13:30:31,973 - INFO - Columna make convertida a categórica
+2025-05-13 13:30:31,991 - INFO - Columna model convertida a categórica
+2025-05-13 13:30:32,011 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 13:30:32,046 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 13:30:32,047 - INFO - Columna electric_range convertida a numérica
+2025-05-13 13:30:32,047 - INFO - Manejando valores faltantes
+2025-05-13 13:30:32,048 - INFO - Valores nulos por columna antes del tratamiento:
+vin                       0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 13:30:32,056 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 13:30:32,071 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 13:30:32,078 - INFO - Valores nulos por columna después del tratamiento:
+vin                      0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 13:30:32,079 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 13:30:32,083 - INFO - Duplicados eliminados basados en VIN
+2025-05-13 13:30:32,084 - INFO - Filas después de eliminar duplicados: 14122
+2025-05-13 13:30:32,084 - INFO - Se eliminaron 225622 filas duplicadas
+2025-05-13 13:30:32,157 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 13:30:32,157 - INFO - Limpiando nombres de columnas
+2025-05-13 13:30:34,405 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 13:30:34,405 - INFO - Proceso de transformación completado con éxito
+2025-05-13 13:30:34,405 - INFO - Dataset optimizado: 11 columnas, 14122 filas
+2025-05-13 13:30:34,405 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 13:30:34,421 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 13:30:34,587 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:30:34,587 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 13:30:34,721 - INFO - Columnas en la base de datos: ['id', 'vin', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range', 'base_msrp', 'legislative_district', 'dol_vehicle_id', 'vehicle_location', 'electric_utility', 'registration_date']
+2025-05-13 13:30:34,721 - INFO - Columnas en el DataFrame: ['vin', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 13:30:34,737 - WARNING - Columnas faltantes en el DataFrame: ['base_msrp', 'legislative_district', 'dol_vehicle_id', 'vehicle_location', 'electric_utility', 'registration_date']
+2025-05-13 13:30:34,749 - INFO - Cargando 14122 filas en la tabla electric_vehicles
+2025-05-13 13:30:35,209 - ERROR - Error al cargar datos en la base de datos: la sintaxis de entrada no es válida para tipo integer: «21.0»
+CONTEXT:  COPY electric_vehicles, línea 1, columna electric_range: «21.0»
+
+2025-05-13 13:30:35,209 - ERROR - Fallo en la carga de datos. Deteniendo el pipeline.
+2025-05-13 13:40:54,824 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:40:54,824 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:41:02,517 - INFO - Base de datos 'ev_challenge_db' creada correctamente
+2025-05-13 13:41:02,592 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:41:03,003 - INFO - Tablas e índices creados correctamente
+2025-05-13 13:41:03,003 - INFO - Base de datos inicializada correctamente
+2025-05-13 13:41:03,003 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 13:41:03,003 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 13:41:03,003 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 13:41:03,003 - INFO - Proceso de extracción completado con éxito
+2025-05-13 13:41:03,003 - INFO - Paso 3/5: Transformando datos
+2025-05-13 13:41:03,003 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 13:41:03,634 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 13:41:03,634 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 13:41:03,648 - INFO - Limpiando nombres de columnas
+2025-05-13 13:41:03,671 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 13:41:03,694 - INFO - Convirtiendo tipos de datos
+2025-05-13 13:41:03,729 - INFO - Columna vin convertida a categórica
+2025-05-13 13:41:03,747 - INFO - Columna county convertida a categórica
+2025-05-13 13:41:03,767 - INFO - Columna city convertida a categórica
+2025-05-13 13:41:03,777 - INFO - Columna state convertida a categórica
+2025-05-13 13:41:03,778 - INFO - Columna postal_code convertida a numérica
+2025-05-13 13:41:03,803 - INFO - Columna model_year convertida a fecha
+2025-05-13 13:41:03,813 - INFO - Columna make convertida a categórica
+2025-05-13 13:41:03,829 - INFO - Columna model convertida a categórica
+2025-05-13 13:41:03,846 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 13:41:03,885 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 13:41:03,887 - INFO - Columna electric_range convertida a numérica
+2025-05-13 13:41:03,887 - INFO - Manejando valores faltantes
+2025-05-13 13:41:03,894 - INFO - Valores nulos por columna antes del tratamiento:
+vin                       0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 13:41:03,898 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 13:41:03,917 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 13:41:03,922 - INFO - Valores nulos por columna después del tratamiento:
+vin                      0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 13:41:03,924 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 13:41:03,929 - INFO - Duplicados eliminados basados en VIN
+2025-05-13 13:41:03,929 - INFO - Filas después de eliminar duplicados: 14122
+2025-05-13 13:41:03,930 - INFO - Se eliminaron 225622 filas duplicadas
+2025-05-13 13:41:04,009 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 13:41:04,009 - INFO - Limpiando nombres de columnas
+2025-05-13 13:41:06,466 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 13:41:06,466 - INFO - Proceso de transformación completado con éxito
+2025-05-13 13:41:06,466 - INFO - Dataset optimizado: 11 columnas, 14122 filas
+2025-05-13 13:41:06,466 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 13:41:06,466 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 13:41:06,525 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:41:06,525 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 13:41:06,525 - INFO - Columnas en la base de datos: ['id', 'dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 13:41:06,525 - INFO - Columnas en el DataFrame: ['vin', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 13:41:06,539 - WARNING - Columnas faltantes en el DataFrame: ['dol_vehicle_id']
+2025-05-13 13:41:06,541 - INFO - Cargando 14122 filas en la tabla electric_vehicles
+2025-05-13 13:41:06,821 - ERROR - Error al cargar datos en la base de datos: la sintaxis de entrada no es válida para tipo date: «1970»
+CONTEXT:  COPY electric_vehicles, línea 1, columna model_year: «1970»
+
+2025-05-13 13:41:06,824 - ERROR - Fallo en la carga de datos. Deteniendo el pipeline.
+2025-05-13 13:52:32,296 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 13:52:32,296 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 13:52:32,947 - INFO - Base de datos 'ev_challenge_db' creada correctamente
+2025-05-13 13:52:33,008 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:52:33,037 - INFO - Tablas e índices creados correctamente
+2025-05-13 13:52:33,038 - INFO - Base de datos inicializada correctamente
+2025-05-13 13:52:33,038 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 13:52:33,038 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 13:52:33,039 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 13:52:33,039 - INFO - Proceso de extracción completado con éxito
+2025-05-13 13:52:33,039 - INFO - Paso 3/5: Transformando datos
+2025-05-13 13:52:33,039 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 13:52:33,659 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 13:52:33,659 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 13:52:33,680 - INFO - Limpiando nombres de columnas
+2025-05-13 13:52:33,701 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 13:52:33,712 - INFO - Convirtiendo tipos de datos
+2025-05-13 13:52:33,762 - INFO - Columna vin convertida a categórica
+2025-05-13 13:52:33,782 - INFO - Columna county convertida a categórica
+2025-05-13 13:52:33,804 - INFO - Columna city convertida a categórica
+2025-05-13 13:52:33,820 - INFO - Columna state convertida a categórica
+2025-05-13 13:52:33,820 - INFO - Columna postal_code convertida a numérica
+2025-05-13 13:52:33,936 - INFO - Columna model_year convertida a fecha
+2025-05-13 13:52:33,940 - INFO - Columna make convertida a categórica
+2025-05-13 13:52:33,959 - INFO - Columna model convertida a categórica
+2025-05-13 13:52:33,976 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 13:52:34,013 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 13:52:34,014 - INFO - Columna electric_range convertida a numérica
+2025-05-13 13:52:34,014 - INFO - Manejando valores faltantes
+2025-05-13 13:52:34,014 - INFO - Valores nulos por columna antes del tratamiento:
+vin                       0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 13:52:34,023 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 13:52:34,027 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 13:52:34,042 - INFO - Valores nulos por columna después del tratamiento:
+vin                      0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 13:52:34,043 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 13:52:34,043 - INFO - Duplicados eliminados basados en VIN
+2025-05-13 13:52:34,043 - INFO - Filas después de eliminar duplicados: 14122
+2025-05-13 13:52:34,043 - INFO - Se eliminaron 225622 filas duplicadas
+2025-05-13 13:52:34,141 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 13:52:34,142 - INFO - Limpiando nombres de columnas
+2025-05-13 13:52:36,612 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 13:52:36,612 - INFO - Proceso de transformación completado con éxito
+2025-05-13 13:52:36,613 - INFO - Dataset optimizado: 11 columnas, 14122 filas
+2025-05-13 13:52:36,613 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 13:52:36,619 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 13:52:36,658 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:52:36,658 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 13:52:36,679 - INFO - Columnas en la base de datos: ['id', 'vin', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 13:52:36,680 - INFO - Columnas en el DataFrame: ['vin', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 13:52:36,680 - INFO - Cargando 14122 filas en la tabla electric_vehicles
+2025-05-13 13:52:37,371 - INFO - Datos cargados exitosamente en la tabla electric_vehicles
+2025-05-13 13:52:37,371 - INFO - Paso 5/5: Preparando datos para Power BI
+2025-05-13 13:52:37,371 - INFO - Consultando vehículos por año
+2025-05-13 13:52:37,538 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:52:37,538 - INFO - Ejecutando consulta SQL
+2025-05-13 13:52:37,737 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 21
+2025-05-13 13:52:37,777 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\vehicles_by_year.csv
+2025-05-13 13:52:37,778 - INFO - Consultando top 10 modelos
+2025-05-13 13:52:37,881 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:52:37,881 - INFO - Ejecutando consulta SQL
+2025-05-13 13:52:37,895 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 10
+2025-05-13 13:52:37,896 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\top_models.csv
+2025-05-13 13:52:37,896 - INFO - Consultando concentración geográfica de vehículos CAFV
+2025-05-13 13:52:37,939 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:52:37,939 - INFO - Ejecutando consulta SQL
+2025-05-13 13:52:37,981 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 211
+2025-05-13 13:52:37,981 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\cafv_by_location.csv
+2025-05-13 13:52:37,981 - INFO - Consultando cambio interanual por condado
+2025-05-13 13:52:38,029 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 13:52:38,029 - INFO - Ejecutando consulta SQL
+2025-05-13 13:52:38,188 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 363
+2025-05-13 13:52:38,188 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\yoy_change.csv
+2025-05-13 13:52:38,188 - INFO - Todos los resultados de consultas guardados correctamente
+2025-05-13 13:52:38,188 - INFO - Pipeline completado con éxito en 5.89 segundos
+2025-05-13 15:09:18,732 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 15:09:18,732 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 15:09:19,627 - INFO - Base de datos 'ev_challenge_db' creada correctamente
+2025-05-13 15:09:19,669 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 15:09:19,699 - INFO - Tablas e índices creados correctamente
+2025-05-13 15:09:19,700 - INFO - Base de datos inicializada correctamente
+2025-05-13 15:09:19,700 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 15:09:19,700 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 15:09:19,701 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 15:09:19,701 - INFO - Proceso de extracción completado con éxito
+2025-05-13 15:09:19,701 - INFO - Paso 3/5: Transformando datos
+2025-05-13 15:09:19,701 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 15:09:20,398 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 15:09:20,398 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 15:09:20,418 - INFO - Limpiando nombres de columnas
+2025-05-13 15:09:20,448 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 15:09:20,473 - INFO - Convirtiendo tipos de datos
+2025-05-13 15:09:20,475 - INFO - Columna dol_vehicle_id convertida a numérica
+2025-05-13 15:09:20,492 - INFO - Columna county convertida a categórica
+2025-05-13 15:09:20,507 - INFO - Columna city convertida a categórica
+2025-05-13 15:09:20,518 - INFO - Columna state convertida a categórica
+2025-05-13 15:09:20,518 - INFO - Columna postal_code convertida a numérica
+2025-05-13 15:09:20,631 - INFO - Columna model_year convertida a fecha
+2025-05-13 15:09:20,631 - INFO - Columna make convertida a categórica
+2025-05-13 15:09:20,652 - INFO - Columna model convertida a categórica
+2025-05-13 15:09:20,666 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 15:09:20,704 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 15:09:20,704 - INFO - Columna electric_range convertida a numérica
+2025-05-13 15:09:20,704 - INFO - Manejando valores faltantes
+2025-05-13 15:09:20,715 - INFO - Valores nulos por columna antes del tratamiento:
+dol_vehicle_id            0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 15:09:20,723 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 15:09:20,739 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 15:09:20,746 - INFO - Valores nulos por columna después del tratamiento:
+dol_vehicle_id           0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 15:09:20,747 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 15:09:20,748 - ERROR - Error en el proceso de transformación: local variable 'df_no_duplicates' referenced before assignment
+2025-05-13 15:09:20,759 - ERROR - Fallo en la transformación de datos. Deteniendo el pipeline.
+2025-05-13 15:11:02,540 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 15:11:02,540 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 15:11:02,615 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 15:11:02,667 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 15:11:02,736 - INFO - Tablas e índices creados correctamente
+2025-05-13 15:11:02,736 - INFO - Base de datos inicializada correctamente
+2025-05-13 15:11:02,737 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 15:11:02,738 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 15:11:02,738 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 15:11:02,738 - INFO - Proceso de extracción completado con éxito
+2025-05-13 15:11:02,738 - INFO - Paso 3/5: Transformando datos
+2025-05-13 15:11:02,738 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 15:11:03,346 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 15:11:03,346 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 15:11:03,363 - INFO - Limpiando nombres de columnas
+2025-05-13 15:11:03,381 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 15:11:03,410 - INFO - Convirtiendo tipos de datos
+2025-05-13 15:11:03,411 - INFO - Columna dol_vehicle_id convertida a numérica
+2025-05-13 15:11:03,428 - INFO - Columna county convertida a categórica
+2025-05-13 15:11:03,448 - INFO - Columna city convertida a categórica
+2025-05-13 15:11:03,455 - INFO - Columna state convertida a categórica
+2025-05-13 15:11:03,455 - INFO - Columna postal_code convertida a numérica
+2025-05-13 15:11:03,581 - INFO - Columna model_year convertida a fecha
+2025-05-13 15:11:03,594 - INFO - Columna make convertida a categórica
+2025-05-13 15:11:03,608 - INFO - Columna model convertida a categórica
+2025-05-13 15:11:03,627 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 15:11:03,652 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 15:11:03,652 - INFO - Columna electric_range convertida a numérica
+2025-05-13 15:11:03,652 - INFO - Manejando valores faltantes
+2025-05-13 15:11:03,666 - INFO - Valores nulos por columna antes del tratamiento:
+dol_vehicle_id            0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 15:11:03,669 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 15:11:03,685 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 15:11:03,691 - INFO - Valores nulos por columna después del tratamiento:
+dol_vehicle_id           0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 15:11:03,693 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 15:11:03,710 - INFO - Duplicados eliminados basados en DOL VEHICLE ID
+2025-05-13 15:11:03,710 - INFO - Filas después de eliminar duplicados: 239744
+2025-05-13 15:11:03,710 - INFO - Se eliminaron 0 filas duplicadas
+2025-05-13 15:11:05,283 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 15:11:05,283 - INFO - Limpiando nombres de columnas
+2025-05-13 15:11:07,673 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 15:11:07,673 - INFO - Proceso de transformación completado con éxito
+2025-05-13 15:11:07,673 - INFO - Dataset optimizado: 11 columnas, 239744 filas
+2025-05-13 15:11:07,673 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 15:11:07,680 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 15:11:07,763 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 15:11:07,763 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 15:11:07,853 - INFO - Columnas en la base de datos: ['id', 'dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 15:11:07,853 - INFO - Columnas en el DataFrame: ['dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 15:11:07,866 - INFO - Cargando 239744 filas en la tabla electric_vehicles
+2025-05-13 15:11:19,771 - INFO - Datos cargados exitosamente en la tabla electric_vehicles
+2025-05-13 15:11:19,792 - INFO - Paso 5/5: Preparando datos para Power BI
+2025-05-13 15:11:19,793 - INFO - Consultando vehículos por año
+2025-05-13 15:11:19,878 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 15:11:19,878 - INFO - Ejecutando consulta SQL
+2025-05-13 15:11:20,122 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 21
+2025-05-13 15:11:20,122 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\vehicles_by_year.csv
+2025-05-13 15:11:20,122 - INFO - Consultando top 10 modelos
+2025-05-13 15:11:20,191 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 15:11:20,191 - INFO - Ejecutando consulta SQL
+2025-05-13 15:11:20,288 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 10
+2025-05-13 15:11:20,289 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\top_models.csv
+2025-05-13 15:11:20,290 - INFO - Consultando concentración geográfica de vehículos CAFV
+2025-05-13 15:11:20,326 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 15:11:20,326 - INFO - Ejecutando consulta SQL
+2025-05-13 15:11:20,509 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 596
+2025-05-13 15:11:20,509 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\cafv_by_location.csv
+2025-05-13 15:11:20,509 - INFO - Consultando cambio interanual por condado
+2025-05-13 15:11:20,676 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 15:11:20,676 - INFO - Ejecutando consulta SQL
+2025-05-13 15:11:20,857 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 938
+2025-05-13 15:11:20,874 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\yoy_change.csv
+2025-05-13 15:11:20,874 - INFO - Todos los resultados de consultas guardados correctamente
+2025-05-13 15:11:20,874 - INFO - Pipeline completado con éxito en 18.33 segundos
+2025-05-13 16:08:20,649 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 16:08:20,649 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 16:08:20,725 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 16:08:20,775 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:08:20,924 - INFO - Tablas e índices creados correctamente
+2025-05-13 16:08:20,925 - INFO - Base de datos inicializada correctamente
+2025-05-13 16:08:20,925 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 16:08:20,926 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 16:08:20,926 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 16:08:20,927 - INFO - Proceso de extracción completado con éxito
+2025-05-13 16:08:20,927 - INFO - Paso 3/5: Transformando datos
+2025-05-13 16:08:20,927 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 16:08:21,732 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 16:08:21,732 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 16:08:21,753 - INFO - Limpiando nombres de columnas
+2025-05-13 16:08:21,774 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 16:08:21,807 - INFO - Convirtiendo tipos de datos
+2025-05-13 16:08:21,807 - INFO - Columna dol_vehicle_id convertida a numérica
+2025-05-13 16:08:21,830 - INFO - Columna county convertida a categórica
+2025-05-13 16:08:21,858 - INFO - Columna city convertida a categórica
+2025-05-13 16:08:21,864 - INFO - Columna state convertida a categórica
+2025-05-13 16:08:21,864 - INFO - Columna postal_code convertida a numérica
+2025-05-13 16:08:21,984 - INFO - Columna model_year convertida a fecha
+2025-05-13 16:08:21,998 - INFO - Columna make convertida a categórica
+2025-05-13 16:08:22,012 - INFO - Columna model convertida a categórica
+2025-05-13 16:08:22,027 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 16:08:22,067 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 16:08:22,067 - INFO - Columna electric_range convertida a numérica
+2025-05-13 16:08:22,067 - INFO - Manejando valores faltantes
+2025-05-13 16:08:22,073 - INFO - Valores nulos por columna antes del tratamiento:
+dol_vehicle_id            0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 16:08:22,075 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 16:08:22,094 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 16:08:22,099 - INFO - Valores nulos por columna después del tratamiento:
+dol_vehicle_id           0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 16:08:22,099 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 16:08:22,111 - INFO - Duplicados eliminados basados en DOL VEHICLE ID
+2025-05-13 16:08:22,111 - INFO - Filas después de eliminar duplicados: 239744
+2025-05-13 16:08:22,111 - INFO - Se eliminaron 0 filas duplicadas
+2025-05-13 16:08:23,571 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 16:08:23,571 - INFO - Limpiando nombres de columnas
+2025-05-13 16:08:26,101 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 16:08:26,101 - INFO - Proceso de transformación completado con éxito
+2025-05-13 16:08:26,101 - INFO - Dataset optimizado: 11 columnas, 239744 filas
+2025-05-13 16:08:26,101 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 16:08:26,101 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 16:08:26,198 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:08:26,199 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 16:08:26,211 - INFO - Columnas en la base de datos: ['id', 'dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 16:08:26,212 - INFO - Columnas en el DataFrame: ['dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 16:08:26,224 - INFO - Cargando 239744 filas en la tabla electric_vehicles
+2025-05-13 16:08:34,850 - INFO - Datos cargados exitosamente en la tabla electric_vehicles
+2025-05-13 16:08:34,874 - INFO - Paso 5/5: Preparando datos para Power BI
+2025-05-13 16:08:34,874 - INFO - Consultando vehículos por año
+2025-05-13 16:08:35,038 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:08:35,038 - INFO - Ejecutando consulta SQL
+2025-05-13 16:08:35,362 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 21
+2025-05-13 16:08:35,364 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\vehicles_by_year.csv
+2025-05-13 16:08:35,364 - INFO - Consultando top 10 modelos
+2025-05-13 16:08:35,533 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:08:35,534 - INFO - Ejecutando consulta SQL
+2025-05-13 16:08:35,611 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 10
+2025-05-13 16:08:35,613 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\top_models.csv
+2025-05-13 16:08:35,613 - INFO - Consultando concentración geográfica de vehículos CAFV
+2025-05-13 16:08:35,660 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:08:35,660 - INFO - Ejecutando consulta SQL
+2025-05-13 16:08:35,734 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 596
+2025-05-13 16:08:35,737 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\cafv_by_location.csv
+2025-05-13 16:08:35,737 - INFO - Consultando cambio interanual por condado
+2025-05-13 16:08:35,883 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:08:35,883 - INFO - Ejecutando consulta SQL
+2025-05-13 16:08:36,095 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 938
+2025-05-13 16:08:36,097 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\yoy_change.csv
+2025-05-13 16:08:36,097 - INFO - Todos los resultados de consultas guardados correctamente
+2025-05-13 16:08:36,097 - INFO - Pipeline completado con éxito en 15.45 segundos
+2025-05-13 16:31:27,753 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 16:31:27,753 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 16:31:27,818 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 16:31:27,969 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:31:27,969 - INFO - Tablas e índices creados correctamente
+2025-05-13 16:31:27,969 - INFO - Base de datos inicializada correctamente
+2025-05-13 16:31:27,969 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 16:31:27,969 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 16:31:27,969 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 16:31:27,969 - INFO - Proceso de extracción completado con éxito
+2025-05-13 16:31:27,969 - INFO - Paso 3/5: Transformando datos
+2025-05-13 16:31:27,969 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 16:31:28,686 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 16:31:28,686 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 16:31:28,711 - INFO - Limpiando nombres de columnas
+2025-05-13 16:31:28,743 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 16:31:28,769 - INFO - Convirtiendo tipos de datos
+2025-05-13 16:31:28,774 - INFO - Columna dol_vehicle_id convertida a numérica
+2025-05-13 16:31:28,807 - INFO - Columna county convertida a categórica
+2025-05-13 16:31:28,840 - INFO - Columna city convertida a categórica
+2025-05-13 16:31:28,855 - INFO - Columna state convertida a categórica
+2025-05-13 16:31:28,856 - INFO - Columna postal_code convertida a numérica
+2025-05-13 16:31:28,989 - INFO - Columna model_year convertida a fecha
+2025-05-13 16:31:29,001 - INFO - Columna make convertida a categórica
+2025-05-13 16:31:29,018 - INFO - Columna model convertida a categórica
+2025-05-13 16:31:29,039 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 16:31:29,085 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 16:31:29,087 - INFO - Columna electric_range convertida a numérica
+2025-05-13 16:31:29,088 - INFO - Manejando valores faltantes
+2025-05-13 16:31:29,098 - INFO - Valores nulos por columna antes del tratamiento:
+dol_vehicle_id            0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 16:31:29,105 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 16:31:29,132 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 16:31:29,138 - INFO - Valores nulos por columna después del tratamiento:
+dol_vehicle_id           0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 16:31:29,140 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 16:31:29,156 - INFO - Duplicados eliminados basados en DOL VEHICLE ID
+2025-05-13 16:31:29,157 - INFO - Filas después de eliminar duplicados: 239744
+2025-05-13 16:31:29,157 - INFO - Se eliminaron 0 filas duplicadas
+2025-05-13 16:31:30,617 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 16:31:30,617 - INFO - Limpiando nombres de columnas
+2025-05-13 16:31:32,890 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 16:31:32,891 - INFO - Proceso de transformación completado con éxito
+2025-05-13 16:31:32,891 - INFO - Dataset optimizado: 11 columnas, 239744 filas
+2025-05-13 16:31:32,891 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 16:31:32,900 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 16:31:32,951 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:31:32,951 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 16:31:32,967 - INFO - Columnas en la base de datos: ['id', 'dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 16:31:32,967 - INFO - Columnas en el DataFrame: ['dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 16:31:32,974 - INFO - Cargando 239744 filas en la tabla electric_vehicles
+2025-05-13 16:31:41,710 - INFO - Datos cargados exitosamente en la tabla electric_vehicles
+2025-05-13 16:31:41,733 - INFO - Paso 5/5: Preparando datos para Power BI
+2025-05-13 16:31:41,733 - INFO - Consultando vehículos por año
+2025-05-13 16:31:41,782 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:31:41,782 - INFO - Ejecutando consulta SQL
+2025-05-13 16:31:41,875 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 21
+2025-05-13 16:31:41,878 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\vehicles_by_year.csv
+2025-05-13 16:31:41,879 - INFO - Consultando top 10 modelos
+2025-05-13 16:31:41,922 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:31:41,922 - INFO - Ejecutando consulta SQL
+2025-05-13 16:31:42,000 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 10
+2025-05-13 16:31:42,001 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\top_models.csv
+2025-05-13 16:31:42,001 - INFO - Consultando concentración geográfica de vehículos CAFV
+2025-05-13 16:31:42,046 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:31:42,046 - INFO - Ejecutando consulta SQL
+2025-05-13 16:31:42,114 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 596
+2025-05-13 16:31:42,114 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\cafv_by_location.csv
+2025-05-13 16:31:42,114 - INFO - Consultando cambio interanual por condado
+2025-05-13 16:31:42,164 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 16:31:42,164 - INFO - Ejecutando consulta SQL
+2025-05-13 16:31:42,254 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 938
+2025-05-13 16:31:42,258 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\yoy_change.csv
+2025-05-13 16:31:42,258 - INFO - Todos los resultados de consultas guardados correctamente
+2025-05-13 16:31:42,258 - INFO - Pipeline completado con éxito en 14.50 segundos
+2025-05-13 17:13:57,057 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 17:13:57,058 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 17:13:57,166 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 17:13:57,218 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:13:57,221 - INFO - Tablas e índices creados correctamente
+2025-05-13 17:13:57,221 - INFO - Base de datos inicializada correctamente
+2025-05-13 17:13:57,221 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 17:13:57,222 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 17:13:57,222 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 17:13:57,222 - INFO - Proceso de extracción completado con éxito
+2025-05-13 17:13:57,223 - INFO - Paso 3/5: Transformando datos
+2025-05-13 17:13:57,223 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 17:13:57,904 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 17:13:57,905 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 17:13:57,920 - INFO - Limpiando nombres de columnas
+2025-05-13 17:13:57,933 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 17:13:57,967 - INFO - Convirtiendo tipos de datos
+2025-05-13 17:13:57,967 - INFO - Columna dol_vehicle_id convertida a numérica
+2025-05-13 17:13:57,985 - INFO - Columna county convertida a categórica
+2025-05-13 17:13:58,005 - INFO - Columna city convertida a categórica
+2025-05-13 17:13:58,015 - INFO - Columna state convertida a categórica
+2025-05-13 17:13:58,015 - INFO - Columna postal_code convertida a numérica
+2025-05-13 17:13:58,114 - INFO - Columna model_year convertida a fecha
+2025-05-13 17:13:58,137 - INFO - Columna make convertida a categórica
+2025-05-13 17:13:58,150 - INFO - Columna model convertida a categórica
+2025-05-13 17:13:58,171 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 17:13:58,200 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 17:13:58,200 - INFO - Columna electric_range convertida a numérica
+2025-05-13 17:13:58,200 - INFO - Manejando valores faltantes
+2025-05-13 17:13:58,209 - INFO - Valores nulos por columna antes del tratamiento:
+dol_vehicle_id            0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 17:13:58,212 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 17:13:58,229 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 17:13:58,233 - INFO - Valores nulos por columna después del tratamiento:
+dol_vehicle_id           0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 17:13:58,233 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 17:13:58,253 - INFO - Duplicados eliminados basados en DOL VEHICLE ID
+2025-05-13 17:13:58,253 - INFO - Filas después de eliminar duplicados: 239744
+2025-05-13 17:13:58,253 - INFO - Se eliminaron 0 filas duplicadas
+2025-05-13 17:13:59,707 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 17:13:59,708 - INFO - Limpiando nombres de columnas
+2025-05-13 17:14:02,270 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 17:14:02,270 - INFO - Proceso de transformación completado con éxito
+2025-05-13 17:14:02,270 - INFO - Dataset optimizado: 11 columnas, 239744 filas
+2025-05-13 17:14:02,270 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 17:14:02,278 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 17:14:02,322 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:14:02,322 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 17:14:02,330 - INFO - Columnas en la base de datos: ['id', 'dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 17:14:02,330 - INFO - Columnas en el DataFrame: ['dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 17:14:02,349 - INFO - Cargando 239744 filas en la tabla electric_vehicles
+2025-05-13 17:14:10,926 - INFO - Datos cargados exitosamente en la tabla electric_vehicles
+2025-05-13 17:14:10,948 - INFO - Paso 5/5: Preparando datos para Power BI
+2025-05-13 17:14:10,949 - INFO - Consultando vehículos por año
+2025-05-13 17:14:10,999 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:14:10,999 - INFO - Ejecutando consulta SQL
+2025-05-13 17:14:11,117 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 21
+2025-05-13 17:14:11,119 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\vehicles_by_year.csv
+2025-05-13 17:14:11,119 - INFO - Consultando top 10 modelos
+2025-05-13 17:14:11,164 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:14:11,164 - INFO - Ejecutando consulta SQL
+2025-05-13 17:14:11,241 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 10
+2025-05-13 17:14:11,241 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\top_models.csv
+2025-05-13 17:14:11,241 - INFO - Consultando concentración geográfica de vehículos CAFV
+2025-05-13 17:14:11,277 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:14:11,277 - INFO - Ejecutando consulta SQL
+2025-05-13 17:14:11,361 - ERROR - Error inesperado al ejecutar consulta: Execution failed on sql '
+    SELECT 
+        'United States'        AS country
+        county, 
+        city, 
+        cafv_eligibility,
+        COUNT(*) AS vehicle_count
+    FROM 
+        electric_vehicles
+    WHERE 
+        cafv_eligibility = 'Clean Alternative Fuel Vehicle Eligible'
+    GROUP BY 
+        county, city, cafv_eligibility
+    ORDER BY 
+        vehicle_count DESC;
+    ': error de sintaxis en o cerca de «county»
+LINE 4:         county, 
+                ^
+
+2025-05-13 17:14:11,361 - INFO - Consultando cambio interanual por condado
+2025-05-13 17:14:11,437 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:14:11,438 - INFO - Ejecutando consulta SQL
+2025-05-13 17:14:11,603 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 938
+2025-05-13 17:14:11,605 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\yoy_change.csv
+2025-05-13 17:14:11,605 - INFO - Todos los resultados de consultas guardados correctamente
+2025-05-13 17:14:11,605 - INFO - Pipeline completado con éxito en 14.55 segundos
+2025-05-13 17:14:51,923 - INFO - Iniciando pipeline de análisis de vehículos eléctricos
+2025-05-13 17:14:51,923 - INFO - Paso 1/5: Inicializando base de datos
+2025-05-13 17:14:51,979 - INFO - Base de datos 'ev_challenge_db' ya existe
+2025-05-13 17:14:52,026 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:14:52,030 - INFO - Tablas e índices creados correctamente
+2025-05-13 17:14:52,030 - INFO - Base de datos inicializada correctamente
+2025-05-13 17:14:52,030 - INFO - Paso 2/5: Extrayendo datos
+2025-05-13 17:14:52,031 - INFO - El archivo electric_vehicle_population_data.csv ya existe. Omitiendo descarga.
+2025-05-13 17:14:52,032 - INFO - Archivo D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv validado correctamente
+2025-05-13 17:14:52,032 - INFO - Proceso de extracción completado con éxito
+2025-05-13 17:14:52,032 - INFO - Paso 3/5: Transformando datos
+2025-05-13 17:14:52,032 - INFO - Leyendo datos del archivo: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\raw\electric_vehicle_population_data.csv
+2025-05-13 17:14:52,650 - INFO - Datos leídos correctamente. Filas: 239747, Columnas: 17
+2025-05-13 17:14:52,650 - INFO - Columnas disponibles: ['VIN (1-10)', 'County', 'City', 'State', 'Postal Code', 'Model Year', 'Make', 'Model', 'Electric Vehicle Type', 'Clean Alternative Fuel Vehicle (CAFV) Eligibility', 'Electric Range', 'Base MSRP', 'Legislative District', 'DOL Vehicle ID', 'Vehicle Location', 'Electric Utility', '2020 Census Tract']
+2025-05-13 17:14:52,672 - INFO - Limpiando nombres de columnas
+2025-05-13 17:14:52,699 - INFO - Seleccionando 11 columnas relevantes de 17 totales
+2025-05-13 17:14:52,723 - INFO - Convirtiendo tipos de datos
+2025-05-13 17:14:52,723 - INFO - Columna dol_vehicle_id convertida a numérica
+2025-05-13 17:14:52,740 - INFO - Columna county convertida a categórica
+2025-05-13 17:14:52,751 - INFO - Columna city convertida a categórica
+2025-05-13 17:14:52,770 - INFO - Columna state convertida a categórica
+2025-05-13 17:14:52,770 - INFO - Columna postal_code convertida a numérica
+2025-05-13 17:14:52,875 - INFO - Columna model_year convertida a fecha
+2025-05-13 17:14:52,880 - INFO - Columna make convertida a categórica
+2025-05-13 17:14:52,900 - INFO - Columna model convertida a categórica
+2025-05-13 17:14:52,920 - INFO - Columna electric_vehicle_type convertida a categórica
+2025-05-13 17:14:52,952 - INFO - Columna cafv_eligibility convertida a categórica
+2025-05-13 17:14:52,954 - INFO - Columna electric_range convertida a numérica
+2025-05-13 17:14:52,954 - INFO - Manejando valores faltantes
+2025-05-13 17:14:52,959 - INFO - Valores nulos por columna antes del tratamiento:
+dol_vehicle_id            0
+county                    3
+city                      3
+state                     0
+postal_code               3
+model_year                0
+make                      0
+model                     0
+electric_vehicle_type     0
+cafv_eligibility          0
+electric_range           49
+dtype: int64
+2025-05-13 17:14:52,962 - INFO - Columna electric_range: 49 valores nulos reemplazados con 0.0
+2025-05-13 17:14:52,966 - INFO - Se eliminaron 3 filas que contenían otros valores nulos
+2025-05-13 17:14:52,981 - INFO - Valores nulos por columna después del tratamiento:
+dol_vehicle_id           0
+county                   0
+city                     0
+state                    0
+postal_code              0
+model_year               0
+make                     0
+model                    0
+electric_vehicle_type    0
+cafv_eligibility         0
+electric_range           0
+dtype: int64
+2025-05-13 17:14:52,981 - INFO - Filas antes de eliminar duplicados: 239744
+2025-05-13 17:14:52,981 - INFO - Duplicados eliminados basados en DOL VEHICLE ID
+2025-05-13 17:14:52,981 - INFO - Filas después de eliminar duplicados: 239744
+2025-05-13 17:14:52,981 - INFO - Se eliminaron 0 filas duplicadas
+2025-05-13 17:14:54,429 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\processed_ev_data.csv
+2025-05-13 17:14:54,429 - INFO - Limpiando nombres de columnas
+2025-05-13 17:14:56,726 - INFO - Datos procesados guardados en: D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\full_processed_ev_data.csv
+2025-05-13 17:14:56,726 - INFO - Proceso de transformación completado con éxito
+2025-05-13 17:14:56,727 - INFO - Dataset optimizado: 11 columnas, 239744 filas
+2025-05-13 17:14:56,727 - INFO - Dataset completo: 17 columnas, 239747 filas
+2025-05-13 17:14:56,728 - INFO - Paso 4/5: Cargando datos en la base de datos
+2025-05-13 17:14:56,903 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:14:56,903 - INFO - Eliminando datos existentes de la tabla electric_vehicles
+2025-05-13 17:14:56,950 - INFO - Columnas en la base de datos: ['id', 'dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 17:14:56,950 - INFO - Columnas en el DataFrame: ['dol_vehicle_id', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'electric_vehicle_type', 'cafv_eligibility', 'electric_range']
+2025-05-13 17:14:56,961 - INFO - Cargando 239744 filas en la tabla electric_vehicles
+2025-05-13 17:15:07,498 - INFO - Datos cargados exitosamente en la tabla electric_vehicles
+2025-05-13 17:15:07,511 - INFO - Paso 5/5: Preparando datos para Power BI
+2025-05-13 17:15:07,511 - INFO - Consultando vehículos por año
+2025-05-13 17:15:07,560 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:15:07,560 - INFO - Ejecutando consulta SQL
+2025-05-13 17:15:07,688 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 21
+2025-05-13 17:15:07,690 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\vehicles_by_year.csv
+2025-05-13 17:15:07,691 - INFO - Consultando top 10 modelos
+2025-05-13 17:15:07,737 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:15:07,737 - INFO - Ejecutando consulta SQL
+2025-05-13 17:15:07,817 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 10
+2025-05-13 17:15:07,819 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\top_models.csv
+2025-05-13 17:15:07,819 - INFO - Consultando concentración geográfica de vehículos CAFV
+2025-05-13 17:15:07,867 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:15:07,867 - INFO - Ejecutando consulta SQL
+2025-05-13 17:15:07,942 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 596
+2025-05-13 17:15:07,955 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\cafv_by_location.csv
+2025-05-13 17:15:07,957 - INFO - Consultando cambio interanual por condado
+2025-05-13 17:15:07,991 - INFO - Conexión a la base de datos establecida correctamente
+2025-05-13 17:15:07,991 - INFO - Ejecutando consulta SQL
+2025-05-13 17:15:08,089 - INFO - Consulta ejecutada con éxito. Filas obtenidas: 938
+2025-05-13 17:15:08,093 - INFO - Resultados guardados en D:\Documentos\Proyectos Data Science\Promtior\ev_challenge_project\data\processed\power_bi\yoy_change.csv
+2025-05-13 17:15:08,093 - INFO - Todos los resultados de consultas guardados correctamente
+2025-05-13 17:15:08,094 - INFO - Pipeline completado con éxito en 16.17 segundos
