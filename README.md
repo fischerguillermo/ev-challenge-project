@@ -37,8 +37,8 @@ ev-data-pipeline/
 
 1. Clonar este repositorio:
 ```bash
-git clone https://github.com/fischerguillermo/ev_challenge_project.git
-cd ev_challenge_project
+git clone https://github.com/fischerguillermo/ev-challenge-project.git
+cd ev-challenge-project
 ```
 
 2. Crear un entorno virtual (opcional pero recomendado):
