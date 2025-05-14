@@ -37,7 +37,7 @@ ev-data-pipeline/
 
 1. Clonar este repositorio:
 ```bash
-git clone https://github.com/tu-usuario/ev_challenge_project.git
+git clone https://github.com/fischerguillermo/ev_challenge_project.git
 cd ev_challenge_project
 ```
 
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 5. Crear el archivo `.env`
 
-En la raíz del proyecto, crea un archivo llamado **`.env`** (asegúrate de que esté en tu `.gitignore`) con el siguiente contenido:
+En la raíz del proyecto, crea un archivo llamado **`.env`** (asegúrate de que esté en tu `.gitignore` y agregar tu contraseña) con el siguiente contenido:
 
 ```dotenv
 DB_HOST=localhost

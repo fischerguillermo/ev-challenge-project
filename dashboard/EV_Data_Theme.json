@@ -1,0 +1,7 @@
+{
+  "name": "EV Data Theme",
+  "dataColors": ["#007bff", "#28a745", "#fd7e14", "#343a40"],
+  "background": "#FFFFFF",
+  "foreground": "#000000",
+  "tableAccent": "#007bff"
+}
